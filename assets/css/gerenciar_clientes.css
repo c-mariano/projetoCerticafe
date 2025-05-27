@@ -1,0 +1,68 @@
+main {
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+}
+main h1,
+main h3 {
+  color: #434346;
+  text-align: left;
+  font-weight: 600;
+}
+.manage-clients-title {
+  width: 70vw;
+  padding-top: 40px;
+}
+main h1 {
+  font-size: 3rem;
+}
+main h3 {
+  width: 50vw;
+  font-size: 1.2rem;
+}
+.table-manage-client {
+  width: 70vw;
+  margin-top: 50px;
+}
+table {
+  width: 70vw;
+}
+table,
+td,
+th {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+table th {
+  padding: 5px 0px;
+  background-color: #154b68;
+  color: #fff;
+}
+table td {
+  text-align: center;
+  padding: 5px 0px;
+}
+.excluir-btn,
+.editar-btn {
+  background-color: #022b4a;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.back-button {
+  width: 70vw;
+}
+.back-button span {
+  background-color: #022b4a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 8px 40px;
+  border-radius: 10px;
+  position: fixed;
+  top: 90%;
+}

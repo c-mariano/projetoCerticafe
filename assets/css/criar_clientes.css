@@ -1,0 +1,61 @@
+main {
+  width: 100vw;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+}
+main h1,
+main h3 {
+  color: #434346;
+  text-align: left;
+  font-weight: 600;
+}
+.create-clients-title {
+  width: 70vw;
+  padding-top: 40px;
+}
+main h1 {
+  font-size: 3rem;
+}
+main h3 {
+  width: 50vw;
+  font-size: 1.2rem;
+}
+.form-create-client {
+  width: 70vw;
+  margin-top: 50px;
+}
+.form-create-client label {
+  font-size: 1.3rem;
+  color: #434346;
+  font-weight: 500;
+}
+.form-create-client input {
+  width: 50vw;
+  padding: 10px;
+  border-radius: 10px;
+}
+.form-create-client button {
+  background-color: #022b4a;
+  border-radius: 10px;
+  padding: 9px 48px;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.back-button {
+  width: 70vw;
+}
+.back-button span {
+  background-color: #022b4a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 8px 40px;
+  border-radius: 10px;
+  position: fixed;
+  top: 90%;
+}

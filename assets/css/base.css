@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  text-decoration: none;
+}
+.montserrat-<uniquifier > {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+main {
+  background-color: #f1f1f1;
+}
+a:visited {
+  color: inherit;
+}
+.back-button {
+  width: 70vw;
+}
+.back-button span {
+  background-color: #022b4a;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 8px 40px;
+  border-radius: 10px;
+  position: fixed;
+  top: 90%;
+}
+.back-button span:hover {
+  background-color: #154b68;
+}
+.excluir-btn,
+.editar-btn {
+  background-color: #022b4a;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.excluir-btn {
+  background-color: #ae0000;
+}
+button[type="submit"]:hover {
+  background-color: #154b68;
+}

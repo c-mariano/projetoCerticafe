@@ -1,6 +1,7 @@
 <?php
 
 include_once("../includes/config.php");
+include('../includes/verifica_login.php');
 
 $sqlClient = "SELECT * FROM clientes ORDER BY idCliente ASC";
 
@@ -25,7 +26,7 @@ $resultClient = $conexao->query($sqlClient);
             <a href="home.php">Página Inicial</a>
         </div>
         <div class="nav-bottom">
-            <a href="login.php"><i class="fi fi-rc-arrow-left-from-line"></i>Sair</a>
+            <a href="../includes/logout.php"><i class="fi fi-rc-arrow-left-from-line"></i>Sair</a>
         </div>
     </nav>
     <main>
@@ -48,7 +49,7 @@ $resultClient = $conexao->query($sqlClient);
                         echo "<td>".$clientData['idCliente'];
                         echo "<td>".$clientData['nomeCliente'];
                         echo "<td class='action'>
-                        <a href='excluir_clientes.php?idCliente={$clientData['idCliente']}' onclick=\"return confirm('Tem certeza que deseja excluir este cliente?');\">
+                        <a href='../includes/excluir_clientes.php?idCliente={$clientData['idCliente']}' onclick=\"return confirm('Tem certeza que deseja excluir este cliente?');\">
                         <button class='excluir-btn'>Excluir</button>
                         </a>";
                     }

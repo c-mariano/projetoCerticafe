@@ -1,6 +1,6 @@
 <?php
         include_once("../includes/config.php");
-
+        include('../includes/verifica_login.php');
         $stmt = mysqli_query($conexao, "SELECT idCliente, nomeCliente FROM clientes");
 
     if (!empty($_GET['idAgendamento'])) {
@@ -45,7 +45,7 @@
             <a href="home.php">Página Inicial</a>
         </div>
         <div class="nav-bottom">
-            <a href="login.php"><i class="fi fi-rc-arrow-left-from-line"></i>Sair</a>
+            <a href="../includes/logout.php"><i class="fi fi-rc-arrow-left-from-line"></i>Sair</a>
         </div>
     </nav>
     <main>
@@ -53,7 +53,7 @@
                 <h1>Editar agendamento</h1>
             </div>
         <div class="form-create-agend">
-            <form action="salvar_edicao.php" method="POST">
+            <form action="../includes/salvar_edicao.php" method="POST">
                 <label for="titulo">Título:</label>
                     <input type="text" id="titulo" name="titulo" value="<?php echo $titulo ?>" required>
                 <label for="desc">Descrição:</label>
@@ -74,7 +74,6 @@
                         while ($data = $stmt->fetch_assoc()){
                             $selected = ($cliente == $data['idCliente'])?'selected':'';
                             echo '<option value="'.htmlspecialchars($data['idCliente']).'" '.$selected.'>'.htmlspecialchars($data['nomeCliente']).'</option>';
-                            // echo '<option value="'.htmlspecialchars($data['idCliente']).'">'.htmlspecialchars($data['nomeCliente']).'</option>';
                         }
                                 ?>
                         </select>

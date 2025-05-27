@@ -1,7 +1,7 @@
 <?php
 
 include_once("../includes/config.php");
-
+include('../includes/verifica_login.php');
 $sql = "SELECT * FROM agendamentos JOIN clientes  ON agendamentos.idCliente = clientes.idCliente ORDER BY idAgendamento ASC ";
 
 $result = $conexao->query($sql);
@@ -29,7 +29,7 @@ $result = $conexao->query($sql);
         <a href="home.php">Página Inicial</a>
       </div>
       <div class="nav-bottom">
-        <a href="login.php"
+        <a href="../includes/logout.php"
           ><i class="fi fi-rc-arrow-left-from-line"></i>Sair</a
         >
       </div>
@@ -65,7 +65,7 @@ $result = $conexao->query($sql);
               <a href='editar_agendamentos.php?idAgendamento=$agendData[idAgendamento]'>
               <button class='editar-btn'>Editar</button>
               </a>
-              <a href='excluir_agendamentos.php?idAgendamento={$agendData['idAgendamento']}'onclick=\"return confirm('Tem certeza que deseja excluir este agendamento?');\">
+              <a href='../includes/excluir_agendamentos.php?idAgendamento={$agendData['idAgendamento']}'onclick=\"return confirm('Tem certeza que deseja excluir este agendamento?');\">
               <button class='excluir-btn'>Excluir</button>
               </a>
               </td>";
@@ -73,21 +73,10 @@ $result = $conexao->query($sql);
 
             ?>
           </tbody>
-          <!-- <tr>
-            <td>1</td>
-            <td>Agendamento do Marcelinho</td>
-            <td>Reunião com Marcelinho, a fim de alinhar a situação</td>
-            <td>Marcelinho</td>
-            <td>25/05/2025</td>
-            <td class="action">
-              <button class="editar-btn">Editar</button
-              ><button class="excluir-btn">Excluir</button>
-            </td>
-          </tr> -->
         </table>
       </div>
       <section class="back-button">
-        <a href="clientes.php"><span>Voltar</span></a>
+        <a href="agendamentos.php"><span>Voltar</span></a>
       </section>
     </main>
   </body>

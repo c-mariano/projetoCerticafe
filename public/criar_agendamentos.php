@@ -1,6 +1,6 @@
 <?php
         include_once("../includes/config.php");
-
+        include('../includes/verifica_login.php');
         $stmt = mysqli_query($conexao, "SELECT idCliente, nomeCliente FROM clientes");
 
     if (isset($_POST["submit"])) {
@@ -39,7 +39,7 @@
             <a href="home.php">Página Inicial</a>
         </div>
         <div class="nav-bottom">
-            <a href="login.php"><i class="fi fi-rc-arrow-left-from-line"></i>Sair</a>
+            <a href="../includes/logout.php"><i class="fi fi-rc-arrow-left-from-line"></i>Sair</a>
         </div>
     </nav>
     <main>

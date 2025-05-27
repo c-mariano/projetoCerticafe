@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $senha_ok = "admin";
 
     if ($usuario === $usuario_ok && $senha === $senha_ok) {
+        $_SESSION["logado"]=true;
         header("Location: home.php");
         exit;
     } else {

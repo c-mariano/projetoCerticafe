@@ -15,6 +15,6 @@
         $result = $conexao->query($sqlUpdate);
     }
 
-    header('Location: gerenciar_agendamentos.php');
+    header('Location: ../public/gerenciar_agendamentos.php');
 
 ?>

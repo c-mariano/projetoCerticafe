@@ -1,5 +1,6 @@
 <?php
 
+    include('../includes/verifica_login.php');
     if (isset($_POST["submit"])) {
         include_once("../includes/config.php");
 
@@ -33,7 +34,7 @@
             <a href="home.php">Página Inicial</a>
         </div>
         <div class="nav-bottom">
-            <a href="login.php"><i class="fi fi-rc-arrow-left-from-line"></i>Sair</a>
+            <a href="../includes/logout.php"><i class="fi fi-rc-arrow-left-from-line"></i>Sair</a>
         </div>
     </nav>
     <main>
